@@ -12,7 +12,7 @@
     <div class="nav-wrapper">
         <a href="#" class="brand-logo">Tutorials</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="">Home</a></li>
+            <li><a href="/">Home</a></li>
             {% if user.is_authenticated %}
             <li><a href="/account">{{user.username}}</a></li>
             <li><a href="/logout">Logout</a></li>
@@ -23,17 +23,20 @@
         </ul>
     </div>
 </nav>
-        <script>M.toast({html:"toasted!!",classes: 'blue rounded'
-         displayLent:2000});</script>
-  {% if messages %}
+<script>M.toast({html:"toasted!!",classes: 'blue rounded'
+         displayLent:2000});
+</script>
+{% if messages %}
 {% for message in messages %}
 <script>M.toast({html:"{{message}}",classes: 'blue rounded'
-         displayLent:2000});</script>
+         displayLent:2000});
+</script>
 
 {% endfor %}
 {% endif %}
 
-<div class="container"></div>
-{% block content %}
-{% endblock %}
+   <div class="container">
+   {% block content %}
+   {% endblock %}
+   </div>
 </body>
