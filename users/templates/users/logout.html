@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="container">
+<h2>Are you sure you want to log out?</h2>
+
+<div class="form-group">
+            <a class="btn btn-outline-info" href="{% url 'blog-home' %}" type="submit">Click To Confirm</a>
+</div>
+</div>
+    {% endblock content %}
