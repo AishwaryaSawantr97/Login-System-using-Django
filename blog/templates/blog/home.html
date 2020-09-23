@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% for post in posts %}
+<div class="container">
+    <div class="card" style="width: 30rem;">
+        <div class="card">
+            <div class="card-header">
+                <article class="media content-section">
+                    <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+
+            <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text">{{post.date_posted}}</p>
+                <a href="#" class="btn btn-primary">{{post.content}}</a>
+            </div>
+
+
+    </article>
+</div>
+</div>
+{% endfor %}
+{% endblock content %}
+    </div>
+</div>
